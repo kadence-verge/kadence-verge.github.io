@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Alternative</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet"
+		href="style.css"
+		type="text/css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<h1>A History of Modern Music</h1>
+		</header>
+	<div class="aside-1">
+		<aside class="aside-1">
+			<ul id="menu">
+				<li id="Item1"><a href="main.html" onmouseover="CloseMenu()">Home</a></li>
+				<li id="Item2"><a href="main.html" onmouseover="OpenMenu('Item2Submenu')">Genres</a>
+					<ul id="Item2Submenu" onmouseover="KeepSubmenu" onmouseout="CloseMenu()">
+						<a href="heavymetal.html">Heavy Metal</a>
+						<a href="rock.html">Rock</a>
+						<a href="alternative.html">Alternative</a>
+						<a href="hiphop.html">Hip-Hip</a>
+					</ul></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</aside>
+		<script>
+			var Item; var Timer;
+			document.onclick=CloseMenu;
+			function OpenMenu(Menu){
+				if(Item){Item.style.visibility="hidden";}
+				Item=document.getElementById(Menu);
+				Item.style.visibility="visible";}	
+			function CloseMenu(){
+				Timer=window.setTimeout(PerformClose,500);}
+			function PerformClose(){
+				if(Item){Item.style.visibility="hidden";}}
+			function KeepSubmenu(){
+				window.clearTimeout(Timer);}
+		</script>
+	</div>
+	<div class="content">
+	<div class="main">
+		<article class="main">
+			<p> Alternative music, also known as alternative rock is a subform of punk rock music that came about in 
+					1980s, but became more popular in the 1990s. Alternative music is different from normal rock
+					because it veers away from mainstream rock music. It is defined by its distorted guitar sound, 
+					transgressive lyrics, and defiant attitude.  
+				</p>
+				<p>Alternative rock is a genre of music that consists of a lot of differing sounds. It has many subgenres
+					such as: britpop, indie rock, grunge, post-rock, and math rock. The typical instruments for
+					alternative music are vocals, electric guitar, bass, drums, and the keyboard. In the beginning 
+					alternative was not mainstream until the 1990s when the band Nirvana and subgenres such as grunge and 
+					britpop became popular. 
+				</p>
+				<p>Again, alternative rock died down but was revived in the early 21st century. Some new popular bands
+					you may know are The Strokes, Franz Ferdinand, Arctic Monkeys, The White Stripes, U2, The Killers, 
+					Foo Fighters, Coldplay, and Thirty Seconds to Mars.
+				</p>
+				<p>The song, "The Pretender" by the Foo Fighters is a good example of alternative music today. The song 
+					"Smells Like Teen Spirit" by Nirvana was and still is a very popular alternative song.
+				</p>
+				<p><iframe width="420" height="315" src="https://www.youtube.com/watch?v=SBjQ9tuuTJQ" frameborder="0" allowfullscreen></iframe>
+			</p>
+		</article>
+	</div>
+	<div class="aside-2">
+		<aside class="aside aside-2">
+			<img src="sideimage.jpg" width="auto" height="490px">
+		</aside>
+	</div>
+	</div>
+	<br style="clear:both">
+		<footer class="footer">
+			<p>Copyright <em> @Kadence Verge, Robin Shafto, Sam Poquette</em> 2014 </p>
+		</footer>
+	</div>
+		<p>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border:0;width:88px;height:31px"
+				src="http://jigsaw.w3.org/css-validator/images/vcss"
+				alt="Valid CSS!" />
+			</a>
+		</p>
+</body>
+</html>

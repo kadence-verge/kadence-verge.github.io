@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Music Genres</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet"
+		href="style.css"
+		type="text/css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<h1>A History of Modern Music</h1>
+		</header>
+	<div class="aside-1">
+		<aside class="aside-1">
+			<ul id="menu">
+				<li id="Item1"><a href="main.html" onmouseover="CloseMenu()">Home</a></li>
+				<li id="Item2"><a href="main.html" onmouseover="OpenMenu('Item2Submenu')">Genres</a>
+					<ul id="Item2Submenu" onmouseover="KeepSubmenu" onmouseout="CloseMenu()">
+						<a href="heavymetal.html">Heavy Metal</a>
+						<a href="rock.html">Rock</a>
+						<a href="alternative.html">Alternative</a>
+						<a href="hiphop.html">Hip-Hip</a>
+					</ul></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</aside>
+		<script>
+			var Item; var Timer;
+			document.onclick=CloseMenu;
+			function OpenMenu(Menu){
+				if(Item){Item.style.visibility="hidden";}
+				Item=document.getElementById(Menu);
+				Item.style.visibility="visible";}	
+			function CloseMenu(){
+				Timer=window.setTimeout(PerformClose,500);}
+			function PerformClose(){
+				if(Item){Item.style.visibility="hidden";}}
+			function KeepSubmenu(){
+				window.clearTimeout(Timer);}
+		</script>
+	</div>
+	<div class="content">
+	<div class="main">
+		<article class="main">
+			<p> Welcome to our website!  On here, we will be discussing the history of several
+				different genres of modern music.  Included will be brief descriptions of the 
+				music itself, a brief history, and a couple good examples of songs that are very 
+				representative of the genre.  For more information, visit the links we provide 
+				on each page.  To contact us, click on the contact tab on the left.
+			</p> 
+		</article>
+	</div>
+	<div class="aside-2">
+		<aside class="aside aside-2">
+			<img src="sideimage.jpg" width="auto" height="490px">
+		</aside>
+	</div>
+	</div>
+	<br style="clear:both">
+		<footer class="footer">
+			<p>Copyright <em> @Kadence Verge, Robin Shafto, Sam Poquette</em> 2014 </p>
+		</footer>
+	</div>
+		<p>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border:0;width:88px;height:31px"
+				src="http://jigsaw.w3.org/css-validator/images/vcss"
+				alt="Valid CSS!" />
+			</a>
+		</p>
+</body>
+</html>

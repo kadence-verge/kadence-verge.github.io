@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet"
+		href="style.css"
+		type="text/css">
+	<script src="http://maps.googleapis.com/maps/api/js? key=AIzaSyCtCwhxe1Be6yOjAm7GGrS8Ejhi3pkY_qk&sensor=false">
+    </script>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<h1>A History of Modern Music</h1>
+		</header>
+	<div class="aside-1">
+		<aside class="aside-1">
+			<ul id="menu">
+				<li id="Item1"><a href="main.html" onmouseover="CloseMenu()">Home</a></li>
+				<li id="Item2"><a href="main.html" onmouseover="OpenMenu('Item2Submenu')">Genres</a>
+					<ul id="Item2Submenu" onmouseover="KeepSubmenu" onmouseout="CloseMenu()">
+						<a href="heavymetal.html">Heavy Metal</a>
+						<a href="rock.html">Rock</a>
+						<a href="alternative.html">Alternative</a>
+						<a href="hiphop.html">Hip-Hip</a>
+					</ul></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</aside>
+		<script>
+	var Item; //Hold current open menu item
+	var Timer;	//Hold timeout value
+	document.onclick=CloseMenu; //Hide the menu after clicking outside it
+	
+	function OpenMenu(Menu)
+	{
+		//if open, close it
+		if(Item)
+		{
+			Item.style.visibility="hidden";
+		}
+		//setup new menu item
+		Item=document.getElementById(Menu);
+		Item.style.visibility="visible";
+	}
+	
+	function CloseMenu()
+	{
+		//setup a timer to close menu
+		Timer = window.setTimeout(PerformClose, 500);
+	}
+	
+	function PerformClose()
+	{
+		if(Item)
+		{
+			Item.style.visibility="hidden";
+		}
+	}
+	
+	function KeepSubmenu()
+	{
+	//reset the timer
+		window.clearTimeout(Timer);
+	}
+	
+	var myCenter=new google.maps.LatLng(44.4758,-73.2119);
+	var marker;
+	function initialize()
+	{
+		var mapProp = {
+		center:myCenter,
+		zoom:5,
+		mapTypeId:google.maps.MapTypeId.ROADMAP
+		};
+
+		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+		marker=new google.maps.Marker({
+		position:myCenter,
+		animation:google.maps.Animation.BOUNCE
+	});
+
+		marker.setMap(map);
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+	</div>
+	<div class="content">
+	<div class="main">
+		<article class="main">
+			<style type="text/css">
+				.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+				.tg td{font-family:Arial, sans-serif;font-size:14px;padding:20px 5px;border-style:solid;border-width:3px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+				.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:20px 5px;border-style:solid;border-width:3px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+				.tg .tg-34jp{font-size:24px;font-family:"Times New Roman", Times, serif !important;;background-color:#010066;color:#ffffff}
+				.tg .tg-i293{font-size:24px;font-family:"Times New Roman", Times, serif !important;;background-color:#000000;color:#ffffff}
+				.tg .tg-u7kv{font-weight:bold;font-size:36px;font-family:"Times New Roman", Times, serif !important;;text-align:center}
+			</style>
+			<table class="tg">
+				<tr>
+					<th class="tg-u7kv" colspan="2">Email Links</th>
+				</tr>
+				<tr>
+					<td class="tg-34jp">Sam</td>
+					<td class="tg-i293"><a href="mailto:esam430@gmail.com">esam430@gmail.com</a></td>
+				</tr>
+				<tr>
+					<td class="tg-34jp">Kadence</td>
+					<td class="tg-i293"><a href="kadence.verge@mymail.champlain.edu">kadence.verge@mymail.champlain.edu</a></td>
+				</tr>
+				<tr>
+					<td class="tg-34jp">Robin</td>
+					<td class="tg-i293"><a href="robin.shafto@mymail.champlain.edu">robin.shafto@mymail.champlain.edu</a></td>
+				</tr>
+			</table>
+			<div id="googleMap" style="width:500px;height:380px;">
+			</div>
+		</article>
+	</div>
+	<div class="aside-2">
+		<aside class="aside aside-2">
+			<img src="sideimage.jpg" width="auto" height="490px">
+		</aside>
+	</div>
+	</div>
+	<br style="clear:both">
+		<footer class="footer">
+			<p>Copyright <em> @Kadence Verge, Robin Shafto, Sam Poquette</em> 2014 </p>
+		</footer>
+	</div>
+		<p>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border:0;width:88px;height:31px"
+				src="http://jigsaw.w3.org/css-validator/images/vcss"
+				alt="Valid CSS!" />
+			</a>
+		</p>
+</body>
+</html>
