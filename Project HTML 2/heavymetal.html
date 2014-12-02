@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Heavy Metal</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet"
+		href="style.css"
+		type="text/css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<h1>A History of Modern Music</h1>
+		</header>
+	<div class="aside-1">
+		<aside class="aside-1">
+			<ul id="menu">
+				<li id="Item1"><a href="main.html" onmouseover="CloseMenu()">Home</a></li>
+				<li id="Item2"><a href="main.html" onmouseover="OpenMenu('Item2Submenu')">Genres</a>
+					<ul id="Item2Submenu" onmouseover="KeepSubmenu" onmouseout="CloseMenu()">
+						<a href="heavymetal.html">Heavy Metal</a>
+						<a href="rock.html">Rock</a>
+						<a href="alternative.html">Alternative</a>
+						<a href="hiphop.html">Hip-Hip</a>
+					</ul></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</aside>
+		<script>
+			var Item; var Timer;
+			document.onclick=CloseMenu;
+			function OpenMenu(Menu){
+				if(Item){Item.style.visibility="hidden";}
+				Item=document.getElementById(Menu);
+				Item.style.visibility="visible";}	
+			function CloseMenu(){
+				Timer=window.setTimeout(PerformClose,500);}
+			function PerformClose(){
+				if(Item){Item.style.visibility="hidden";}}
+			function KeepSubmenu(){
+				window.clearTimeout(Timer);}
+		</script>
+	</div>
+	<div class="content">
+	<div class="main">
+		<article class="main">
+			<p>Heavy Metal is a genre of music spawned from rock n roll beginning in the 1970’s.  Pioneers like Led Zepplin and Black
+					Sabbath paved the way for further subgenres.  
+				</p>
+				<p>With roots in blues and rock, the bands that created heavy metal developed a thick, massive sound, characterized by
+					highly amplified distortion, extended guitar solos, emphatic beats, and overall loudness. Heavy metal lyrics and performance
+					styles are often associated with masculinity, aggression, and machismo.
+				</p>
+				<p>The electric guitar has always been key in heavy metal, usually very loud and distorted.  Palm muting is often employed to
+				keep the sound tighter and more precise.  Loud and dense bass and drums are also usually present.  Overall, loudness is key.
+				</p>
+				<p>A good example of heavy metal is the song “Master of Puppets” by Metallica.  Metallica is a classic thrash metal band,
+				a subgenre of heavy metal emphasized by speed and aggression.
+				<p><iframe width="420" height="315" src="https://www.youtube.com/embed/lPjP0jbxBXw" frameborder="0" allowfullscreen></iframe>
+			</p>
+		</article>
+	</div>
+	<div class="aside-2">
+		<aside class="aside aside-2">
+			<img src="sideimage.jpg" width="auto" height="490px">
+		</aside>
+	</div>
+	</div>
+	<br style="clear:both">
+		<footer class="footer">
+			<p>Copyright <em> @Kadence Verge, Robin Shafto, Sam Poquette</em> 2014 </p>
+		</footer>
+	</div>
+		<p>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border:0;width:88px;height:31px"
+				src="http://jigsaw.w3.org/css-validator/images/vcss"
+				alt="Valid CSS!" />
+			</a>
+		</p>
+</body>
+</html>
